@@ -1,0 +1,214 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    color: whitesmoke;
+}
+
+/* Background Image */
+body {
+    background-image: url(./images.css/AAO_HomePage_Splash_2.height-550.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: space-between;
+}
+
+/* Main Wrapper for the Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Current Income Section */
+.incomeContainer{
+    position: sticky;
+    top:2px;
+    background-color: black;
+    border-radius: 10px;
+    min-width: 400px;
+}
+.currentIncome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700; /* Bold text */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Limit the width for better focus */
+    text-align: center;
+    color: #ffb300;
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    min-width: 120px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* Units Section Layout - Columns for Land, Air, Sea */
+.unitsSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid with columns for units */
+    gap: 20px; /* Space between each unit column */
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+
+/* Unit Card Style */
+.unit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for unit cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+
+.unit:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.unit h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.unit .amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Infantry Purchased Section */
+
+
+.unitsPurchased h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Buttons Layout */
+.buttonSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+.nextRoundContainer{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+.nextRoundButton {
+    width: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styling */
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px); /* Button hover effect */
+}
+
+/* Red Buttons */
+.minus, .nextRoundButton {
+    background-color: crimson;
+}
+
+.minus:hover, .nextRoundButton:hover {
+    background-color: darkred;
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .currentIncome {
+        font-size: 1.5rem; /* Adjust font size */
+        padding: 15px;
+    }
+
+    .amount {
+        font-size: 2.5rem;
+    }
+
+    .unitsSection {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+    }
+
+    .unit {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .unitsPurchased {
+        padding: 15px;
+    }
+
+    .buttonSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on mobile */
+        margin: 10px 0;
+    }
+}
