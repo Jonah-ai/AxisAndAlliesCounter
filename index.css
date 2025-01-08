@@ -17,7 +17,6 @@ body {
     flex-direction: column;
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
-    height: 100%;
     margin: 0;
 }
 
